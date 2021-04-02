@@ -15,18 +15,18 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    for (let y = 0; y <= 4; y++) {
+        for (let x = 0; x <= 4; x++) {
+            led.plot(x, y)
+            basic.pause(100)
+            basic.clearScreen()
+        }
+    }
+    basic.showIcon(IconNames.Heart)
+    basic.pause(1000)
+    basic.clearScreen()
     Counter = 0
     basic.showNumber(Counter)
 })
 let Counter = 0
 Counter = 0
-for (let y = 0; y <= 4; y++) {
-    for (let x = 0; x <= 4; x++) {
-        led.plot(x, y)
-        basic.pause(100)
-        basic.clearScreen()
-    }
-}
-basic.showIcon(IconNames.Heart)
-basic.pause(1000)
-basic.clearScreen()
