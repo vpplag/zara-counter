@@ -1,6 +1,11 @@
 input.onButtonPressed(Button.A, function () {
-    Counter += 1
-    basic.showNumber(Counter)
+    if (Counter < 9) {
+        Counter += 1
+        basic.showNumber(Counter)
+    } else {
+        soundExpression.sad.play()
+        basic.showIcon(IconNames.No)
+    }
 })
 input.onButtonPressed(Button.B, function () {
     Counter += -1
