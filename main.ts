@@ -30,3 +30,4 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 })
 let Counter = 0
 Counter = 0
+basic.showNumber(Counter)
